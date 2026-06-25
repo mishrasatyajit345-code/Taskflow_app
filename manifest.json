@@ -1,0 +1,21 @@
+{
+  "name": "TaskFlow To Do List",
+  "short_name": "TaskFlow",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#F0E8DE",
+  "theme_color": "#e64a19",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

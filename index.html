@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Oswald:wght@200..700&family=Share+Tech&family=Inter:wght@100..900&family=Tai+Heritage+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e64a19">
+    <link rel="apple-touch-icon" href="logo.png">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">🌕TaskFlow</div>
+            <div id="nav">
+                <div class="text"><p>Home</p></div>
+                <div class="text"><p>Feature</p></div>
+                <div class="text"><p>TO DO</p></div>
+                <div class="text"><p>Connect</p></div>
+            </div>
+            <div id="darkbtn">🌛</div>
+        </div>
+        <div id="fakeheader"></div>
+        
+        <div id="page1">
+            <span class="Herotag">⭐Built for BCA Students</span>
+            <div class="herocontent">Organize <br> your life,<br>One task at a<br> time.</div>
+            <div id="paragraph"><p>A simple, modern mini project to help you learn HTML, CSS & <br>JavaScript — by actually building something real.</p></div>
+            <div class="btns">
+                <div id="btn1">Start Tasking <i class="ri-arrow-right-line"></i></div>
+                <div id="btn2">contact us</div>
+                <button id="pwaInstallBtn" style="display: none; background: #e64a19; color: white; padding: 15px 25px; border-radius: 10px; border: none; cursor: pointer; font-weight: bold;">Install App</button>
+            </div>
+        </div>
+
+        <div id="page2">
+            <div id="content2">What You'll Learn</div>
+            <div id="pg2"><p>This project covers the core building blocks of frontend <br>development.</p></div>
+            <div id="card">
+                <div class="card" id="card1">
+                    <div id="logo1">📄</div>
+                    <div id="HTML"><p>HTML Structure</p></div>
+                    <div id="htmlpg"><p>Here "HTML" is used for adding link, paragraph, headings, and also logo.</p></div>
+                </div>
+                <div class="card" id="card2">
+                    <div id="logo2">🎨</div>
+                    <div id="css"><p>CSS Structure</p></div>
+                    <div id="csspg"><p>Here CSS is majorly used for Styling and designing the TO-DO-LIST.</p></div>
+                </div>
+                <div class="card" id="card3">
+                    <div id="logo3">🦓</div>
+                    <div id="js"><p>JavaScript Structure</p></div>
+                    <div id="jspg">Here JavaScript is used to accelerate the toggle and buttons.</div>
+                </div>
+                <div class="card" id="card4">
+                    <div id="logo4">📱</div>
+                    <div id="rpd">Responsive Design</div>
+                    <div id="rpdpg"><p>Media queries make this look great on both your phone and laptop.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page3">
+            <div id="content3">Your Task List</div>
+            <div id="pg3">⭐Mentioned Your Task Here⭐</div>
+            <div class="task-box">
+                <div class="input-section">
+                    <input type="text" id="taskInput" placeholder="What do you need to do?">
+                    <button class="add-btn" onclick="addNewTask()">Add Task</button>
+                </div>
+                <div class="filters">
+                    <button class="filter-btn active" onclick="filterTasks('all', this)">All</button>
+                    <button class="filter-btn" onclick="filterTasks('active', this)">Active</button>
+                    <button class="filter-btn" onclick="filterTasks('done', this)">Done</button>
+                </div>
+                <div class="no-tasks" id="noTasksMsg">
+                     No tasks yet! Add one above. ✨
+                </div>
+                <div class="tasks-list" id="tasksContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

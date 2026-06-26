@@ -167,3 +167,39 @@ window.addEventListener("appinstalled", () => {
         installBtn.style.display = "none";
     }
 });
+const startTaskingBtn = document.getElementById("btn1");
+const taskPage = document.getElementById("page3");
+
+if (startTaskingBtn && taskPage) {
+    startTaskingBtn.addEventListener("click", () => {
+        taskPage.scrollIntoView({ behavior: "smooth" });
+    });
+}
+const navLinks = document.querySelectorAll("#header #nav .text p");
+
+navLinks.forEach(link => {
+    link.style.cursor = "pointer";
+    link.addEventListener("click", () => {
+        const text = link.innerText.trim().toLowerCase();
+        
+        if (text === "home") {
+            const page1 = document.getElementById("page1");
+            if (page1) page1.scrollIntoView({ behavior: "smooth" });
+        } else if (text === "feature") {
+            const page2 = document.getElementById("page2");
+            if (page2) page2.scrollIntoView({ behavior: "smooth" });
+        } else if (text === "to do") {
+            const page3 = document.getElementById("page3");
+            if (page3) page3.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
+const startTaskingBtn = document.getElementById("btn1");
+const taskPage = document.getElementById("page3");
+
+if (startTaskingBtn && taskPage) {
+    startTaskingBtn.addEventListener("click", () => {
+        taskPage.scrollIntoView({ behavior: "smooth" });
+    });
+}
